@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunktodoshka_front"]=self["webpackChunktodoshka_front"]||[]).push([[634],{3634:function(o,e,n){n.r(e),n.d(e,{default:function(){return d}});var t=n(3396);const s={class:"home"},r=(0,t._)("h1",null,"Welcome to Todoshka",-1),a=(0,t._)("h3",null,"Make some todoshki",-1),u=[r,a];function c(o,e,n,r,a,c){return(0,t.wg)(),(0,t.iD)("div",s,u)}var h={name:"HomeView"},k=n(89);const l=(0,k.Z)(h,[["render",c]]);var d=l}}]);
+//# sourceMappingURL=634.8faef780.js.map
