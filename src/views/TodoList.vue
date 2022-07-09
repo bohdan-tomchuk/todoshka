@@ -9,10 +9,10 @@
       </div>
       <div class="todo__list">
          <TodoItem 
-            v-for="todo in todos"
-            :key="todo.id"
+            v-for="(todo, key, idx) in todos"
+            :key="idx"
             :todo = "todo"
-            @click="removeTodo(todo)"
+            @click="removeTodo(key)"
          />
       </div>
    </div>
@@ -33,7 +33,7 @@ export default {
       const route = useRoute()
       const store = useStore()
       const userId = computed( () => route.params.userId )
-      const todos = store.state.user.user.todos
+      const todos = computed( () => store.state.todo.todos)
 
       const state = reactive({
          newTodoContent: ''
@@ -45,8 +45,9 @@ export default {
          state.newTodoContent = ''
       }
 
-      function removeTodo(todo) {
-         todos.splice(todos.indexOf(todo), 1)
+      function removeTodo(todoKey) {
+         console.log(todoKey)
+         store.dispatch('removeTodo', todoKey)
       }
 
       return {
